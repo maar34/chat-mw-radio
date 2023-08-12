@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Orbitron&family=Roboto:wght@300&display=swap');
+
+
+:root {
+	--dark-color-a: #000000;
+	--dark-color-b: #000000; 
+	--light-color: rgb(0, 0, 0); 
+	--light-color-b: rgb(255, 255, 255); 
+	--success-color: rgb(255, 255, 255);
+	--error-color: rgb(0, 0, 0);
+	--mw-color-a: rgb(255,51,204);
+	--mw-color-b: rgb(51,255,255); 
+	
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Styles for the outer container */
+.big-container {
+	border: 2px solid  var(--mw-color-a);
+	background-color: transparent;
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 800px; /* Adjust as needed */
+	margin: 0 auto;
+	}
+	
+body {
+	font-family: 'Inter', sans-serif, monospace;
+	font-size: 16px;
+	background: var(--dark-color-b);
+	margin: 20px;
+}
+
+
+H1 {
+	font-family: 'Orbitron', sans-serif, monospace;
+	font-size: 2.4rem;
+	color: var(--mw-color-b);
+	background: var(dark-color-a);
+	margin: 20px;
+}
+
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: var(--mw-color-b);
+	color: var(--mw-color-a);
+	border: 2;
+	font-size: 18px;
+}
+
+/* Chat Page */
+
+.chat-container {
+	max-width: 1100px;
+
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+  
+
+.chat-header {
+	background: var(--dark-color-);
+	color: var(--mw-color-b); /* Fonts Title Color for chat */
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: transparent;
+	border-radius: 10px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.chat-main {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	
+}
+
+.chat-sidebar {
+	background: var(--dark-color-a);
+	color:  var(--mw-color-a);/* Fonts colors side bar */
+	padding: 20px 20px 60px;
+	overflow-y: auto;
+	background-color: transparent;
+	border-radius: 10px;
+	height: 444px; /* Set a fixed height */
+
+	
+}
+
+.chat-sidebar h2 {
+	font-size: 20px;
+	background: var(--mw-color-b);/* Highlight colors side bar */
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+	margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+	padding: 10px 0;
+}
+
+.chat-messages {
+	color: var(--dark-color-a);/* Fonts colors side bar */
+	background-color: transparent;
+	border-radius: 10px;
+	border: 1px solid var(--mw-color-a);
+	padding: 30px;
+	max-height: 444px;
+	height: 444px; /* Adjust the height as needed */
+	overflow-y: auto;
+}
+
+.chat-messages .message {
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: var(--light-color-b);
+	border-radius: 5px;
+}
+
+.chat-messages .message .meta {
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--mw-color-a);
+	opacity: 1;
+	margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+	color: var(--mw-color-a);
+}
+
+.chat-form-container {
+	padding: 20px 30px;
+	background-color:  var(--dark-color-a);
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 1;
+}
+
+/* Join Page */
+/* Responsive Join Container */
+.join-container {
+	border: 3px solid var(--mw-color-a);
+	padding: 0;
+	background-color: transparent;
+	border-radius: 10px;
+	margin: 0 auto;
+	width: 90%; /* Set a percentage-based width */
+	max-width: 800px; /* Set a maximum width to ensure it doesn't get too wide */
+  }
+
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	height: 100px;
+	background: var(--light-color);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.join-main {
+	padding: 30px 40px;
+	background: var(--dark-color-a);
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+}
+
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+}
