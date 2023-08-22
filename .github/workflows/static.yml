@@ -31,8 +31,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: npm install  # Change to the appropriate command for your project
+      - name: Read package.json and install dependencies
+        run: |
+          npm install  # Or use the appropriate package manager command
       - name: Build Content
         run: npm run build  # Change to the appropriate command for building
       - name: Setup Pages
