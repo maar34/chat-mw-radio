@@ -18,7 +18,7 @@ const io = socketio(server);
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
- const botName = 'Bot';
+ const botName = 'xBot';
 
 // Run when client connects (Everybody)
 
