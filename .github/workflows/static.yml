@@ -1,10 +1,12 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Simple workflow for deploying static content to GitHub Pages and running Node.js server
+
+name: Deploy static content to Pages and run Node.js server
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches:
+      - "main"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,19 +32,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Read package.json and install dependencies
-        run: |
-          npm install  # Or use the appropriate package manager command
-      - name: Build Content
-        run: npm run build  # Change to the appropriate command for building
+        uses: actions/checkout@v3
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v3
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-pages-artifact@v2
         with:
-          # Upload contents of the "public" folder
-          path: 'public'
+          # Upload entire repository
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+      - name: Run Node.js server
+        run: node server.js  # Change to the appropriate command for your server script
